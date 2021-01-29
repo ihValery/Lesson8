@@ -16,15 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brI-7h-STa">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brI-7h-STa">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test GitHub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7x-uY-hhc">
+                                        <rect key="frame" x="162" y="77" width="90" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="L7x-uY-hhc" firstAttribute="top" secondItem="brI-7h-STa" secondAttribute="top" constant="77" id="Bdx-RP-aC6"/>
+                                    <constraint firstAttribute="trailing" secondItem="L7x-uY-hhc" secondAttribute="trailing" constant="162" id="ben-9i-Eoy"/>
+                                    <constraint firstItem="L7x-uY-hhc" firstAttribute="leading" secondItem="brI-7h-STa" secondAttribute="leading" constant="162" id="xUP-1x-t2a"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="a31-tK-6XT"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="eos-LA-krR"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="brI-7h-STa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="207:448" id="gCh-yi-HXk"/>
+                            <constraint firstItem="brI-7h-STa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="geM-0J-hSm"/>
+                            <constraint firstItem="brI-7h-STa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="207:448" id="nTh-th-xUN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
