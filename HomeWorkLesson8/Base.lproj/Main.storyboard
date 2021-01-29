@@ -62,7 +62,7 @@
                                                     <action selector="switchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="EUa-tC-oY0"/>
                                                 </connections>
                                             </switch>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ydd-4g-Iek">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ydd-4g-Iek">
                                                 <rect key="frame" x="18" y="162" width="231" height="30"/>
                                                 <connections>
                                                     <action selector="sliderChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="W8W-za-kn2"/>
@@ -74,23 +74,27 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R1v-Wn-sd9">
-                                                <rect key="frame" x="281" y="159" width="61" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R1v-Wn-sd9">
+                                                <rect key="frame" x="281" y="156" width="61" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="61" id="8wz-v5-9jJ"/>
+                                                    <constraint firstAttribute="height" constant="40" id="F45-3Z-P0q"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="qG7-fe-BJ3"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textFieldAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="DJh-zq-lca"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="e1R-NN-K6y" firstAttribute="centerX" secondItem="7Hp-d5-vjm" secondAttribute="centerX" id="6On-zZ-vXY"/>
-                                            <constraint firstItem="R1v-Wn-sd9" firstAttribute="top" secondItem="e1R-NN-K6y" secondAttribute="bottom" constant="41" id="7JQ-gx-kGx"/>
                                             <constraint firstItem="elB-X2-6dP" firstAttribute="top" secondItem="7Hp-d5-vjm" secondAttribute="top" constant="22" id="Dfv-rV-uOd"/>
                                             <constraint firstItem="elB-X2-6dP" firstAttribute="leading" secondItem="R1v-Wn-sd9" secondAttribute="leading" constant="12" id="K2Y-HJ-g67"/>
                                             <constraint firstItem="elB-X2-6dP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0tP-Nt-hIQ" secondAttribute="trailing" constant="8" symbolic="YES" id="L4c-Xo-dNr"/>
-                                            <constraint firstAttribute="bottom" secondItem="R1v-Wn-sd9" secondAttribute="bottom" constant="18" id="TUZ-iG-ghj"/>
+                                            <constraint firstAttribute="bottom" secondItem="R1v-Wn-sd9" secondAttribute="bottom" constant="15" id="TUZ-iG-ghj"/>
                                             <constraint firstItem="R1v-Wn-sd9" firstAttribute="leading" secondItem="ydd-4g-Iek" secondAttribute="trailing" constant="34" id="fSB-lL-Lmy"/>
                                             <constraint firstItem="e1R-NN-K6y" firstAttribute="leading" secondItem="ydd-4g-Iek" secondAttribute="leading" id="gQW-he-ZdD"/>
                                             <constraint firstItem="ydd-4g-Iek" firstAttribute="top" secondItem="e1R-NN-K6y" secondAttribute="bottom" constant="44" id="jLu-B1-eI2"/>
