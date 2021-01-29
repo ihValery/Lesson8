@@ -62,7 +62,7 @@
                                                     <action selector="switchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="EUa-tC-oY0"/>
                                                 </connections>
                                             </switch>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ydd-4g-Iek">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" minimumValueImage="speaker.slash" catalog="system" maximumValueImage="speaker.wave.3" translatesAutoresizingMaskIntoConstraints="NO" id="ydd-4g-Iek">
                                                 <rect key="frame" x="18" y="162" width="231" height="30"/>
                                                 <connections>
                                                     <action selector="sliderChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="W8W-za-kn2"/>
@@ -163,6 +163,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="speaker.slash" catalog="system" width="124" height="128"/>
+        <image name="speaker.wave.3" catalog="system" width="128" height="86"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
