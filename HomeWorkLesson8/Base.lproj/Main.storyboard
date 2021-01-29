@@ -21,6 +21,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="633600671.43599701">
                                     <!--2021-01-29 08:11:11 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="changeTimeDatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="P2f-8d-yBF"/>
+                                </connections>
                             </datePicker>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWk-wK-CJ1">
                                 <rect key="frame" x="0.0" y="310" width="390" height="476"/>
@@ -43,6 +46,9 @@
                                         <rect key="frame" x="35" y="439" width="320" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
                                         <state key="normal" title="Удалить"/>
+                                        <connections>
+                                            <action selector="deletAlarmButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZw-9b-F1x"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Hp-d5-vjm">
                                         <rect key="frame" x="15" y="47" width="362" height="211"/>
@@ -52,31 +58,40 @@
                                             </progressView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elB-X2-6dP">
                                                 <rect key="frame" x="293" y="22" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="EUa-tC-oY0"/>
+                                                </connections>
                                             </switch>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ydd-4g-Iek">
                                                 <rect key="frame" x="18" y="162" width="231" height="30"/>
+                                                <connections>
+                                                    <action selector="sliderChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="W8W-za-kn2"/>
+                                                </connections>
                                             </slider>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R1v-Wn-sd9">
-                                                <rect key="frame" x="307" y="159" width="35" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tP-Nt-hIQ">
                                                 <rect key="frame" x="20" y="27" width="70" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R1v-Wn-sd9">
+                                                <rect key="frame" x="281" y="159" width="61" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="61" id="8wz-v5-9jJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="e1R-NN-K6y" firstAttribute="centerX" secondItem="7Hp-d5-vjm" secondAttribute="centerX" id="6On-zZ-vXY"/>
                                             <constraint firstItem="R1v-Wn-sd9" firstAttribute="top" secondItem="e1R-NN-K6y" secondAttribute="bottom" constant="41" id="7JQ-gx-kGx"/>
                                             <constraint firstItem="elB-X2-6dP" firstAttribute="top" secondItem="7Hp-d5-vjm" secondAttribute="top" constant="22" id="Dfv-rV-uOd"/>
-                                            <constraint firstItem="elB-X2-6dP" firstAttribute="leading" secondItem="R1v-Wn-sd9" secondAttribute="leading" constant="-14" id="K2Y-HJ-g67"/>
+                                            <constraint firstItem="elB-X2-6dP" firstAttribute="leading" secondItem="R1v-Wn-sd9" secondAttribute="leading" constant="12" id="K2Y-HJ-g67"/>
                                             <constraint firstItem="elB-X2-6dP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0tP-Nt-hIQ" secondAttribute="trailing" constant="8" symbolic="YES" id="L4c-Xo-dNr"/>
                                             <constraint firstAttribute="bottom" secondItem="R1v-Wn-sd9" secondAttribute="bottom" constant="18" id="TUZ-iG-ghj"/>
-                                            <constraint firstItem="R1v-Wn-sd9" firstAttribute="leading" secondItem="ydd-4g-Iek" secondAttribute="trailing" constant="60" id="fSB-lL-Lmy"/>
+                                            <constraint firstItem="R1v-Wn-sd9" firstAttribute="leading" secondItem="ydd-4g-Iek" secondAttribute="trailing" constant="34" id="fSB-lL-Lmy"/>
                                             <constraint firstItem="e1R-NN-K6y" firstAttribute="leading" secondItem="ydd-4g-Iek" secondAttribute="leading" id="gQW-he-ZdD"/>
                                             <constraint firstItem="ydd-4g-Iek" firstAttribute="top" secondItem="e1R-NN-K6y" secondAttribute="bottom" constant="44" id="jLu-B1-eI2"/>
                                             <constraint firstAttribute="bottom" secondItem="e1R-NN-K6y" secondAttribute="bottom" constant="93" id="lqm-iP-Fbs"/>
