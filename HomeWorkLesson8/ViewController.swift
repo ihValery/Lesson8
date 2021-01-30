@@ -82,16 +82,15 @@ class ViewController: UIViewController {
     
     @IBAction func sliderChanger(_ sender: UISlider) {
         volumeLevel = Int(volumeSlider.value)
-//      volumeLevel = sender.value
         volumeTextField.text = String(volumeLevel)
         volumeProgressView.setProgress((Float(volumeLevel) / 10), animated: true)
-        //myTestLabel.text = volumeLevel
         
     }
-   
+
     @IBAction func textFieldAction(_ sender: UITextField) {
-        volumeTextField.enablesReturnKeyAutomatically = true
-        volumeTextField.keyboardType = .numbersAndPunctuation
+        volumeTextField.resignFirstResponder()                      //Убирает клавиатуру
+        volumeTextField.keyboardType = .numberPad
+        
         guard volumeTextField.text?.isEmpty == false else {         //что бы при пустом поле алерты не задолбали )))
             return
         }                                                           //Проверка что бы вводились только цифры
@@ -123,7 +122,6 @@ class ViewController: UIViewController {
  
         timeFormatter.timeStyle = .short
         timeStringForLabel = timeFormatter.string(from: sender.date)
-//        setAlarmButton.setTitleColor(.black, for: .normal)
     }
     //скрываем наши объекты
     func isHiddenSettingAlarm(bool: Bool) {
