@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var volumeProgressView: UIProgressView!
     @IBOutlet weak var volumeSlider: UISlider!
     @IBOutlet weak var volumeTextField: UITextField!
-    @IBOutlet weak var myTestLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +103,7 @@ class ViewController: UIViewController {
                                                 self.volumeTextField.text = String(self.volumeLevel) }))
                 present(alert, animated: true, completion: nil)
             }
-        } else {                                //экземляк класа UIAlertController с одним из возможных init
+        } else {                                //экземляр класа UIAlertController с одним из возможных init
             let alert = UIAlertController(title: "Оу оу оу Warning!", message: "Так же можно и сломать приложение! Попробуй цифры.", preferredStyle: .alert)
             //вместо замыкания можно было просто nil )))
                                                 //экземпляк класа UIAlertAction для действия пользователя (Ok, Cancel)
