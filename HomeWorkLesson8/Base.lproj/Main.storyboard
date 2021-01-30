@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -32,13 +33,13 @@
                                         <rect key="frame" x="14" y="76" width="362" height="211"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" minimumValueImage="speaker.slash" catalog="system" maximumValueImage="speaker.wave.3" translatesAutoresizingMaskIntoConstraints="NO" id="ydd-4g-Iek">
-                                                <rect key="frame" x="35.666666666666657" y="162.66666666666669" width="196" height="28.333333333333343"/>
+                                                <rect key="frame" x="35.333333333333329" y="162.66666666666669" width="196.33333333333337" height="28.333333333333343"/>
                                                 <connections>
                                                     <action selector="sliderChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="W8W-za-kn2"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tP-Nt-hIQ">
-                                                <rect key="frame" x="37.666666666666664" y="26.999999999999996" width="69.333333333333343" height="36.666666666666657"/>
+                                                <rect key="frame" x="37.333333333333336" y="26.999999999999996" width="70.333333333333314" height="36.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -55,7 +56,7 @@
                                                 </connections>
                                             </textField>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e1R-NN-K6y">
-                                                <rect key="frame" x="37.666666666666657" y="103.66666666666669" width="287" height="4"/>
+                                                <rect key="frame" x="37.333333333333343" y="103.66666666666669" width="287.33333333333326" height="4"/>
                                             </progressView>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elB-X2-6dP">
                                                 <rect key="frame" x="269.66666666666669" y="30" width="51" height="31.666666666666671"/>
@@ -71,10 +72,11 @@
                                             <constraint firstItem="e1R-NN-K6y" firstAttribute="centerY" secondItem="7Hp-d5-vjm" secondAttribute="centerY" id="2xu-Fq-FiZ"/>
                                             <constraint firstItem="elB-X2-6dP" firstAttribute="top" secondItem="7Hp-d5-vjm" secondAttribute="top" constant="30" id="9Ec-gy-vSI"/>
                                             <constraint firstItem="ydd-4g-Iek" firstAttribute="top" secondItem="e1R-NN-K6y" secondAttribute="bottom" constant="55" id="ANA-em-l9A"/>
+                                            <constraint firstAttribute="trailing" secondItem="elB-X2-6dP" secondAttribute="trailing" constant="43.333333333333314" id="AaC-yh-A2d"/>
                                             <constraint firstItem="e1R-NN-K6y" firstAttribute="leading" secondItem="ydd-4g-Iek" secondAttribute="leading" id="H3c-Si-V5D"/>
                                             <constraint firstItem="e1R-NN-K6y" firstAttribute="top" secondItem="0tP-Nt-hIQ" secondAttribute="bottom" constant="40" id="Nvd-i1-HqF"/>
                                             <constraint firstItem="ydd-4g-Iek" firstAttribute="centerY" secondItem="R1v-Wn-sd9" secondAttribute="centerY" id="PUS-3w-XVf"/>
-                                            <constraint firstItem="elB-X2-6dP" firstAttribute="leading" secondItem="0tP-Nt-hIQ" secondAttribute="trailing" constant="162.66666666666669" id="R3i-bg-NhT"/>
+                                            <constraint firstItem="elB-X2-6dP" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0tP-Nt-hIQ" secondAttribute="trailing" constant="162" id="R3i-bg-NhT"/>
                                             <constraint firstItem="e1R-NN-K6y" firstAttribute="top" secondItem="elB-X2-6dP" secondAttribute="bottom" constant="42.000000000000014" id="RsL-cR-rbd"/>
                                             <constraint firstItem="R1v-Wn-sd9" firstAttribute="leading" secondItem="ydd-4g-Iek" secondAttribute="trailing" constant="34" id="Sr4-0b-ho8"/>
                                             <constraint firstItem="e1R-NN-K6y" firstAttribute="trailing" secondItem="R1v-Wn-sd9" secondAttribute="trailing" id="Ubi-zF-S96"/>
@@ -125,6 +127,7 @@
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
                             <constraint firstItem="MhJ-t7-4aN" firstAttribute="top" secondItem="3U6-5f-FFL" secondAttribute="bottom" constant="12" id="0Lc-e3-xJ6"/>
+                            <constraint firstAttribute="width" secondItem="HN8-XY-XMi" secondAttribute="height" multiplier="65:8" id="P8d-fF-vmW"/>
                             <constraint firstItem="3U6-5f-FFL" firstAttribute="centerX" secondItem="MhJ-t7-4aN" secondAttribute="centerX" id="THo-KT-Aom"/>
                             <constraint firstItem="3U6-5f-FFL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Two-Od-p26"/>
                             <constraint firstItem="MhJ-t7-4aN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VCI-fM-PT9"/>

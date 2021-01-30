@@ -90,7 +90,9 @@ class ViewController: UIViewController {
     }
    
     @IBAction func textFieldAction(_ sender: UITextField) {
-       guard volumeTextField.text?.isEmpty == false else {         //что бы при пустом поле алерты не задолбали )))
+        volumeTextField.enablesReturnKeyAutomatically = true
+        volumeTextField.keyboardType = .numbersAndPunctuation
+        guard volumeTextField.text?.isEmpty == false else {         //что бы при пустом поле алерты не задолбали )))
             return
         }                                                           //Проверка что бы вводились только цифры
         if let myItem = Int(volumeTextField.text!) {                //Смогли достать опционал Int значения?
